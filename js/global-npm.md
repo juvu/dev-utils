@@ -5,5 +5,6 @@ npm install -g editorconfig
 npm install -g node-dev
 npm install -g aws-sdk
 npm install -g node-lambda
+npm install -g mocha
 ```
 
