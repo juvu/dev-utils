@@ -13,12 +13,6 @@ npm install -g mocha
 ---
 
 # Windows (admin console)
-
 ```
 npm install -g windows-build-tools
 ```
-
-or
-
-https://github.com/oracle/node-oracledb/blob/master/README.md#installation
-
