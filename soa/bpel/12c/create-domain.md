@@ -39,7 +39,7 @@ Adicionar o servidor como `JBpelStandaloneWebLogicServer` no ApplicationServers 
 > Resources > New SOA-MDS Connection > File Based MDS > MDS Root Folder: **$ORACLE_NOME/user_projects/domains/base_domain/store/gmds/mds-soa/soa-infra**
 
 
-## Tune your JDeveloper 12c
+# Tune your JDeveloper 12c
 
 **Step 1:** Configure JVM settings in jdev.conf
 
