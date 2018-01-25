@@ -15,4 +15,4 @@ http://localhost:8001/em
 - SOA Infrastructure > SOA Administration > Common Properties
 - More SOA Infra Advanced Configuration Properties...
 - AuditConfig
-- Increase the value of instanceTrackingAuditTrailThreshold parameter (In my case 104857600).
+- Increase the value of `instanceTrackingAuditTrailThreshold` parameter (In my case 104857600).
