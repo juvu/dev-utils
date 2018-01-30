@@ -29,6 +29,14 @@ export QS_TEMPLATES="$ORACLE_HOME/soa/common/templates/wls/oracle.soa_template.j
 
 Adicionar o servidor como `JBpelStandaloneWebLogicServer` no ApplicationServers do JDEV
 
+**Windows Configuration:**
+
+Add on `setDomainEnv.cmd`
+
+```bash
+set JAVA_OPTIONS=%JAVA_OPTIONS% -Dfile.encoding=utf8
+```
+
 #### Criar MSDs
 **localGtwDefinitions:**
 
@@ -37,3 +45,11 @@ Adicionar o servidor como `JBpelStandaloneWebLogicServer` no ApplicationServers 
 **oramds:**
 
 > Resources > New SOA-MDS Connection > File Based MDS > MDS Root Folder: **$ORACLE_NOME/user_projects/domains/base_domain/store/gmds/mds-soa/soa-infra**
+
+**Linux Require:**
+
+Add on begin of file `$ORACLE_HOME/Oracle12c/osb/jdeveloper/jdev/bin/jdev.sh`:
+
+```bash
+export MDS_PATH=$HOME/Documents/git/GTW_DEFINITIONS
+```
