@@ -1,12 +1,9 @@
 /*
+
 USE:
-$.getScript( "http://test_script.js" )
-  .done(function( script, textStatus ) {
-    console.log('Successfully loaded script');
-  })
-  .fail(function( jqxhr, settings, exception ) {
-    console.error('Failed to load script');
-});
+
+$.get( 'https://raw.githubusercontent.com/flaviolsousa/dev-utils/master/js/snippet/responsivo/fill-checkout.js?_=' + new Date().getTime(), (data)=>eval(data));
+
 */
 $('span:contains("Nome")').next('input').val((i, v)=>'FLAVIO' + String.fromCharCode(65 + i)).blur();
 $('span:contains("Sobrenome")').next('input').val('SOUSA').blur();
