@@ -29,8 +29,7 @@ setTimeout(() => {
 	$('span:contains("Cidade")').parent().find('input').val('Santo Andre').blur();
 	$('span:contains("Bairro")').parent().find('input').val('Campestre').blur();
 	$('span:contains("Estado")').parent().find('select').val('SP').blur();
-}, 2000);
-
+}, 3000);
 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
 
 
