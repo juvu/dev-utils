@@ -9,7 +9,7 @@ $('span:contains("Nome")').next('input').val((i, v)=>'FLAVIO' + String.fromCharC
 $('span:contains("Sobrenome")').next('input').val('SOUSA').blur();
 $('span:contains("Data de Nascimento")').next('input').val('01/01/1980').blur();
 $('span:contains("CPF")').next('input').val('012.345.678-90').blur();
-$('span:contains("Declaro que li as")').parent().find('input').attr('checked', 'checked').blur();
+$('span:contains("Declaro que li as")').parent().find('input').click();
 $('span:contains("Telefone")').parent().find('input').val('(11) 22222-3333').blur();
 $('span:contains("E-mail")').parent().find('input').val('teste@cvc.com.br').blur();
 $('span:contains("Confirme o E-mail")').parent().find('input').val('teste@cvc.com.br').blur();
@@ -28,7 +28,7 @@ setTimeout(() => {
 	$('span:contains("Número")').parent().find('input.addressNumber').val('123').blur();
 	$('span:contains("Cidade")').parent().find('input').val('Santo Andre').blur();
 	$('span:contains("Bairro")').parent().find('input').val('Campestre').blur();
-	$('span:contains("Estado")').parent().find('select').val('SP').blur();
+	$('span:contains("Estado")').parent().find('select').val('SP').click().change();
 }, 3000);
 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
 
