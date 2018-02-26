@@ -15,7 +15,7 @@ http://localhost:8001/em
 - Change (Apply):
 
     ```Properties
-    MaxRecoverAttempt = 0
+    MaxRecoverAttempt=0
     ```
 	
 - Open **RecoveryConfig**
@@ -23,17 +23,17 @@ http://localhost:8001/em
     - Change following values **FolderRecurringScheduleConfig**
 
         ```Properties
-        maxMessageRaiseSize = 0 
-        startWindowTime = 00:00 
-        stopWindowTime = 00:00
-        subsequentTriggerDelay = 0
-        threshHoldTimeInMinutes = 0
+        maxMessageRaiseSize=0
+        startWindowTime=00:00
+        stopWindowTime=00:00
+        subsequentTriggerDelay=0
+        threshHoldTimeInMinutes=0
         ```
 
     - Change following values **FolderStartupScheduleConfig**
 
         ```Properties
-        maxMessageRaiseSize = 0
-        startupRecoveryDuration = 0
-        subsequentTriggerDelay = 0
+        maxMessageRaiseSize=0
+        startupRecoveryDuration=0
+        subsequentTriggerDelay=0
         ```
