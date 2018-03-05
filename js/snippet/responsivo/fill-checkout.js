@@ -29,6 +29,8 @@ function pageLoaded() {
 	
 	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	
+
+	letcountCheckEndereco = 0;
 	$('span:contains("CEP")').parent().find('input').val('09070-000').blur();
 	function setAllEndereco() {
 		$('span:contains("Endereço")').parent().find('input').val('Rua Miranda').blur();
@@ -45,7 +47,12 @@ function pageLoaded() {
 			setTimeout(checkEndereco, 500);
 		} else {
 			if ($('span:contains("Endereço")').parent().find('input').val() == '') {
-				setAllEndereco();
+				if (letcountCheckEndereco++ < 1) {
+					$('span:contains("CEP")').parent().find('input').blur();
+					setTimeout(checkEndereco, 500);
+				} else {
+					setAllEndereco();
+				}
 			} else {
 				setEndereco();
 			}
