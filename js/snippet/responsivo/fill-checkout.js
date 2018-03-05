@@ -30,7 +30,7 @@ function pageLoaded() {
 	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	
 
-	letcountCheckEndereco = 0;
+	let countCheckEndereco = 0;
 	$('span:contains("CEP")').parent().find('input').val('09070-000').blur();
 	function setAllEndereco() {
 		console.log('FLS: setAllEndereco');
@@ -50,7 +50,7 @@ function pageLoaded() {
 			setTimeout(checkEndereco, 500);
 		} else {
 			if ($('span:contains("Endereço")').parent().find('input').val() == '') {
-				if (letcountCheckEndereco++ < 1) {
+				if (countCheckEndereco++ < 1) {
 					$('span:contains("CEP")').parent().find('input').blur();
 					setTimeout(checkEndereco, 500);
 				} else {
