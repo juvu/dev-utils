@@ -33,7 +33,7 @@ function pageLoaded() {
 	letcountCheckEndereco = 0;
 	$('span:contains("CEP")').parent().find('input').val('09070-000').blur();
 	function setAllEndereco() {
-		console.log('setAllEndereco');
+		console.log('FLS: setAllEndereco');
 		$('span:contains("Endereço")').parent().find('input').val('Rua Miranda').blur();
 		$('span:contains("Número")').parent().find('input.addressNumber').val('123').blur();
 		$('span:contains("Cidade")').parent().find('input').val('Santo Andre').blur();
@@ -41,11 +41,11 @@ function pageLoaded() {
 		$('span:contains("Estado")').parent().find('select').val('SP').click().change();
 	}
 	function setEndereco() {
-		console.log('setEndereco');
+		console.log('FLS: setEndereco');
 		$('span:contains("Número")').parent().find('input.addressNumber').val('123').blur();
 	}
 	function checkEndereco() {
-		console.log('waitSearchCep');
+		console.log('FLS: waitSearchCep');
 		if ($('span:contains("CEP")').parent().find('.general-loader').size() == 1) {
 			setTimeout(checkEndereco, 500);
 		} else {
@@ -61,17 +61,17 @@ function pageLoaded() {
 			}
 		}
 	}
-	setTimeout(checkEndereco, 2000);
+	setTimeout(checkEndereco, 1000);
 	
 }
 
 function waitPageLoad() {
 	if ($(".general-loader-overlay").size() > 0) {
 		setTimeout(waitPageLoad, 500);
-		console.log('waitPageLoad');
+		console.log('FLS: waitPageLoad');
 	} else {
 		pageLoaded();
-		console.log('pageLoaded');
+		console.log('FLS: pageLoaded');
 	}
 }
 
