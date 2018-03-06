@@ -11,8 +11,8 @@ function pageLoaded() {
 	$('span:contains("Data de Nascimento")').next('input').val('01/01/1980').blur();
 	$('span:contains("CPF")').next('input').val('012.345.678-90').blur();
 	$('span:contains("Telefone")').parent().find('input').val('(11) 22222-3333').blur();
-	$('span:contains("E-mail")').parent().find('input').val('teste@cvc.com.br').blur();
-	$('span:contains("Confirme o E-mail")').parent().find('input').val('teste@cvc.com.br').blur();
+	$('span:contains("E-mail")').parent().find('input').val('timesite@cvc.com.br').blur();
+	$('span:contains("Confirme o E-mail")').parent().find('input').val('timesite@cvc.com.br').blur();
 	$('span:contains("Número do Cartão")').parent().find('input').val('4242 4242 4242 4242').blur();
 	$('span:contains("Data de Validade")').parent().find('input').val('01/2025').blur();
 	$('span:contains("Nome Impresso no Cartão")').parent().find('input').val('teste').blur();
