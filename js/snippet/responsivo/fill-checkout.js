@@ -5,6 +5,7 @@ USE:
 $.get( 'https://raw.githubusercontent.com/flaviolsousa/dev-utils/master/js/snippet/responsivo/fill-checkout.js?_=' + new Date().getTime(), (data)=>eval(data));
 
 */
+/*jshint esversion: 6 */
 function pageLoaded() {
 	$('span:contains("Nome")').next('input').val((i, v)=>'FLAVIO' + String.fromCharCode(65 + i)).blur();
 	$('span:contains("Sobrenome")').next('input').val('SOUSA').blur();
