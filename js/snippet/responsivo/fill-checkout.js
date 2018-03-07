@@ -2,7 +2,7 @@
 
 USE:
 
-$.get( 'https://raw.githubusercontent.com/flaviolsousa/dev-utils/master/js/snippet/responsivo/fill-checkout.js?_=' + new Date().getTime(), (data)=>eval(data));
+$.get( 'https://raw.githubusercontent.com/flaviolsousa/dev-utils/master/js/snippet/responsivo/fill-checkout.js?_=' + Date.now(), d=>eval(d));
 
 */
 /*jshint esversion: 6 */
@@ -23,6 +23,8 @@ function pageLoaded() {
 		let idade = 0 + jv.find('h3').text().replace(/[\r\n\s]+/g, '').replace(/.*a(\d+?)ano.*/, '$1');
 		jv.find('span:contains("Data de Nascimento")').next('input').val('01/01/' + ((new Date()).getFullYear()-idade)).blur();
 	});
+	$('h3:contains("Bebê")').parent().find('span:contains("Data de Nascimento")').next('input').val('01/01/' + (new Date()).getFullYear()).blur();
+	
 	let jCheckDeclaro = $('span:contains("Declaro que li as")').parent().find('input');
 	if (!jCheckDeclaro[0].checked) {
 		jCheckDeclaro.click();
