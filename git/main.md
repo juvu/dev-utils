@@ -8,9 +8,9 @@ set https_proxy=http://cvc_dm\mtzcpd262:SENHA@http://cvcproxy01.cvc.com.br:8080
 
 ### git submodule add 
 ```bash
-git@git.cvc.com.br:Desenvolvimento-SOA/GTW_LAMBDA_LIB_COMMONS.git lib/commons
+git submodule add git@git.cvc.com.br:Desenvolvimento-SOA/GTW_LAMBDA_LIB_COMMONS.git lib/commons
 
-git@git.cvc.com.br:Desenvolvimento-SOA/api-tests/LIB_TEST_API.git lib/test-api
+git submodule add git@git.cvc.com.br:Desenvolvimento-SOA/api-tests/LIB_TEST_API.git lib/test-api
 ```
 
 ## Clone with submodules
