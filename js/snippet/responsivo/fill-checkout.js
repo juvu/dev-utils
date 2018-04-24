@@ -41,10 +41,14 @@ function pageLoaded() {
 		$('span:contains("Cidade"):not([id])').parent().find('input').val('Santo Andre').blur();
 		$('span:contains("Bairro"):not([id])').parent().find('input').val('Campestre').blur();
 		$('span:contains("Estado"):not([id])').parent().find('select').val('SP').click().change();
+
+		console.log('FLS: end');
 	}
 	function setEndereco() {
 		console.log('FLS: setEndereco');
 		$('span:contains("Número"):not([id])').parent().find('input.addressNumber').val('123').blur();
+
+		console.log('FLS: end');
 	}
 	function checkEndereco() {
 		console.log('FLS: waitSearchCep');
