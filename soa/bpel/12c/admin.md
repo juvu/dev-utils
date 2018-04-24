@@ -25,6 +25,10 @@ tail -2000f OSB_SRV0101.out
 
 #### Fix STARTING:
 ```
-rm –rf OSB_SRV0101
+rm -rf OSB_SRV0101
 ```
+
+
+
+
 

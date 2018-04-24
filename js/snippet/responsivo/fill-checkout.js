@@ -11,21 +11,20 @@ function pageLoaded() {
 	$('span:contains("Sobrenome")').next('input').val('SOUSA').blur();
 	$('span:contains("Data de Nascimento")').next('input').val('01/01/1980').blur();
 	$('span:contains("CPF")').next('input').val('012.345.678-90').blur();
-	$('span:contains("Telefone")').parent().find('input').val('(11) 22222-3333').blur();
-	$('span:contains("E-mail")').parent().find('input').val('timesite@cvc.com.br').blur();
-	$('span:contains("Confirme o E-mail")').parent().find('input').val('timesite@cvc.com.br').blur();
-	$('span:contains("Número do Cartão")').parent().find('input').val('4242 4242 4242 4242').blur();
-	$('span:contains("Data de Validade")').parent().find('input').val('01/2025').blur();
-	$('span:contains("Nome Impresso no Cartão")').parent().find('input').val('teste').blur();
-	$('span:contains("Cód. Segurança")').parent().find('input').val('123').blur();
-	$('h3:contains("Criança")').parent().each((i, v) => {
+	$('input.phone').val('(11) 22222-3333').blur();
+	$('input.emailConfirm').val('timesite@cvc.com.br').blur();
+	$('input.number.simulacrum-input').val('4242 4242 4242 4242').blur();
+	$('input.cardDate.simulacrum-input').val('01/2025').blur();
+	$('input.cardName.simulacrum-input').val('teste').blur();
+	$('input.cardCVV.simulacrum-input').val('123').blur();
+	$('h3:contains("Criança"):not([id])').parent().each((i, v) => {
 		let jv = $(v);
 		let idade = 0 + jv.find('h3').text().replace(/[\r\n\s]+/g, '').replace(/.*a(\d+?)ano.*/, '$1');
-		jv.find('span:contains("Data de Nascimento")').next('input').val('01/01/' + ((new Date()).getFullYear()-idade)).blur();
+		jv.find('span:contains("Data de Nascimento"):not([id])').next('input').val('01/01/' + ((new Date()).getFullYear()-idade)).blur();
 	});
-	$('h3:contains("Bebê")').parent().find('span:contains("Data de Nascimento")').next('input').val('01/01/' + (new Date()).getFullYear()).blur();
+	$('h3:contains("Bebê"):not([id])').parent().find('span:contains("Data de Nascimento"):not([id])').next('input').val('01/01/' + (new Date()).getFullYear()).blur();
 	
-	let jCheckDeclaro = $('span:contains("Declaro que li as")').parent().find('input');
+	let jCheckDeclaro = $('span:contains("Declaro que li as"):not([id])').parent().find('input');
 	if (!jCheckDeclaro[0].checked) {
 		jCheckDeclaro.click();
 	}
@@ -34,27 +33,27 @@ function pageLoaded() {
 	
 
 	let countCheckEndereco = 0;
-	$('span:contains("CEP")').parent().find('input').val('09070-000').blur();
+	$('span:contains("CEP"):not([id])').parent().find('input').val('09070-000').blur();
 	function setAllEndereco() {
 		console.log('FLS: setAllEndereco');
-		$('span:contains("Endereço")').parent().find('input').val('Rua Miranda').blur();
-		$('span:contains("Número")').parent().find('input.addressNumber').val('123').blur();
-		$('span:contains("Cidade")').parent().find('input').val('Santo Andre').blur();
-		$('span:contains("Bairro")').parent().find('input').val('Campestre').blur();
-		$('span:contains("Estado")').parent().find('select').val('SP').click().change();
+		$('span:contains("Endereço"):not([id])').parent().find('input').val('Rua Miranda').blur();
+		$('span:contains("Número"):not([id])').parent().find('input.addressNumber').val('123').blur();
+		$('span:contains("Cidade"):not([id])').parent().find('input').val('Santo Andre').blur();
+		$('span:contains("Bairro"):not([id])').parent().find('input').val('Campestre').blur();
+		$('span:contains("Estado"):not([id])').parent().find('select').val('SP').click().change();
 	}
 	function setEndereco() {
 		console.log('FLS: setEndereco');
-		$('span:contains("Número")').parent().find('input.addressNumber').val('123').blur();
+		$('span:contains("Número"):not([id])').parent().find('input.addressNumber').val('123').blur();
 	}
 	function checkEndereco() {
 		console.log('FLS: waitSearchCep');
-		if ($('span:contains("CEP")').parent().find('.general-loader').size() == 1) {
+		if ($('span:contains("CEP"):not([id])').parent().find('.general-loader').size() == 1) {
 			setTimeout(checkEndereco, 500);
 		} else {
-			if ($('span:contains("Endereço")').parent().find('input').val() == '') {
+			if ($('span:contains("Endereço"):not([id])').parent().find('input').val() == '') {
 				if (countCheckEndereco++ < 1) {
-					$('span:contains("CEP")').parent().find('input').blur();
+					$('span:contains("CEP"):not([id])').parent().find('input').blur();
 					setTimeout(checkEndereco, 500);
 				} else {
 					setAllEndereco();
