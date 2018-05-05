@@ -16,7 +16,9 @@ Add on `application.properties`
 ```properties
 spring.h2.console.enabled=true
 ```
+
 Load: http://localhost:8080/h2-console/
+
 | Label        | value               |
 |--------------|---------------------|
 | Driver Class | org.h2.Driver       |
