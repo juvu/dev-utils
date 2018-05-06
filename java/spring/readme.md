@@ -2,3 +2,49 @@
 
 # Start a new project:
 http://start.spring.io/
+
+## Mind Triggers
+
+### Commons Annotations:
+```
+@SpringBootApplication
+@Component
+@Controler
+@Service
+@Profile
+@Primary
+@Autowired
+@PostConstruct
+@PreDestroy
+@RequestMapping("/books")
+```
+
+### Resources:
+
+#### DevBootstrap
+
+```java
+@Component
+public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
+    ...
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		initData();
+	}
+
+	private void initData() {
+		Publisher publisher = new Publisher();
+		publisher.setName("Foo");
+		
+		publisherRepository.save(publisher);
+	}
+    ...
+```
+
+
+#### CrudRepository
+```java
+public interface PublisherRepository extends CrudRepository<Publisher, Long>{
+
+}
+```
