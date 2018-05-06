@@ -9,7 +9,7 @@ http://start.spring.io/
 ```
 @SpringBootApplication
 @Component
-@Controler
+@Controller
 @Service
 @Profile
 @Primary
