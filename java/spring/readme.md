@@ -13,6 +13,7 @@ http://start.spring.io/
 @Service
 @Profile
 @Primary
+@Qualifier
 @Autowired
 @PostConstruct
 @PreDestroy
