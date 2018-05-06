@@ -19,6 +19,24 @@ http://start.spring.io/
 @RequestMapping("/books")
 ```
 
+
+### Commons application.properties:
+```properties
+spring.profiles.active=en
+```
+
+### LifeCycleBean:
+```
+# constructor
+BeanNameAware
+BeanClassLoaderAware
+BeanFactoryAware
+@PostConstruct
+InitializingBean
+@PreDestroy
+DisposableBean
+```
+
 ### Resources:
 
 #### DevBootstrap
