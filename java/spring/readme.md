@@ -15,6 +15,7 @@ http://start.spring.io/
 @Service
 @Repository
 @Configuration
+@PropertySource("classpath:config.properties")
 @Bean
 @Profile
 @Primary
@@ -71,4 +72,15 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
 public interface PublisherRepository extends CrudRepository<Publisher, Long>{
 
 }
+```
+
+
+### Using: @PropertySource and @value
+PropertySourcesPlaceHolderConfigurer Bean only required for @Value("{}") annotations.
+Remove this bean if you are not using @Value annotations for injecting properties.
+```java
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 ```
