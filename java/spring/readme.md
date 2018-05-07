@@ -24,6 +24,7 @@ http://start.spring.io/
 @PostConstruct
 @PreDestroy
 @RequestMapping("/books")
+@ResponseBody
 ```
 
 
