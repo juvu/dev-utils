@@ -8,9 +8,14 @@ http://start.spring.io/
 ### Commons Annotations:
 ```
 @SpringBootApplication
+@ImportResource({"classpath*:spring-config.xml"})
 @Component
 @Controller
+@RestController
 @Service
+@Repository
+@Configuration
+@Bean
 @Profile
 @Primary
 @Qualifier
