@@ -4,3 +4,4 @@
 - jshint 
 - Markdown Preview Enhanced
 - vscode-icons
+- Beautify css/sass/scss/less
