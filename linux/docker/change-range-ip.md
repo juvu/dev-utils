@@ -6,7 +6,7 @@ Create file: /etc/docker/daemon.json
 }
 ```
 
-Execute:
+Restart or Execute:
 ```shell
 sudo service docker restart
 ```
