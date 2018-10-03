@@ -18,6 +18,18 @@ export ORACLE_HOME=$HOME/Oracle/Oracle12c/osb
 export MDS_PATH=$HOME/Documents/git/GTW_DEFINITIONS
 export PS1="\W > "
 
+alias git-a='git add'
+alias git-aa='git add .'
+alias git-c='git commit'
+alias git-cm='git commit --message'
+alias git-co='git checkout'
+alias git-cob='git checkout -b'
+alias git-com='git checkout master'
+alias git-cod='git checkout develop'
+alias git-p='git pull'
+alias git-s='git status'
+alias git-sv='git status -vv'
+
 bind 'set completion-ignore-case on'
 #-------------------
 ```
