@@ -18,19 +18,30 @@ export ORACLE_HOME=$HOME/Oracle/Oracle12c/osb
 export MDS_PATH=$HOME/Documents/git/GTW_DEFINITIONS
 export PS1="\W > "
 
-alias git-a='git add'
-alias git-aa='git add .'
-alias git-c='git commit'
-alias git-cm='git commit --message'
-alias git-co='git checkout'
-alias git-cob='git checkout -b'
-alias git-com='git checkout master'
-alias git-cod='git checkout develop'
-alias git-fa='git fetch --all'
-alias git-p='git pull'
-alias git-pa='git pull --all'
-alias git-s='git status'
-alias git-sv='git status -vv'
+alias ..='cd ..'
+alias ..1='cd ..'
+alias ..2='cd ../../'
+alias ..3='cd ../../../'
+alias ..4='cd ../../../../'
+alias ..5='cd ../../../../../'
+
+alias portls='netstat -tulpn | grep '
+
+alias update='sudo apt-get update && sudo apt-get -y upgrade'
+
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gcm='git commit --message'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gcod='git checkout develop'
+alias gfa='git fetch --all'
+alias gp='git pull'
+alias gpa='git pull --all'
+alias gs='git status'
+alias gsv='git status -vv'
 
 bind 'set completion-ignore-case on'
 #-------------------
